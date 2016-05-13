@@ -7,6 +7,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('web'));
+app.use(express.static('pics'));
 
 app.get('/', function (req, res) {
   //res.send('Hello World!');
