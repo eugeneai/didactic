@@ -1,3 +1,24 @@
-<h1> TEST {{id}}</h1>
+<style>
+svg {
+  border: 3px solid #eee;
+  display: block;
+  margin: 1em auto;
+}
+</style>
 
-{{{svg}}}
+<h1> TEST {{id}}</h1>
+<div id="emb_svg">
+  {{{svg}}}
+</div>
+
+<script type="text/javascript">
+  $("#leave").append(`
+  <animateTransform
+    attributeType="XML"
+    attributeName="transform"
+    type="translate"
+    from="0,0" to="1000,1000"
+    begin="0s" dur="5"
+    repeatCount="indefinite"/>`
+  );
+</script>

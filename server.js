@@ -5,8 +5,8 @@ var fs = require('fs');
 var cache = {};
 
 var app = express();
-// var template='main';
-var template='main-simple';
+var template='main';
+// var template='main-simple';
 
 
 app.engine('handlebars', exphbs({defaultLayout: template}));
@@ -15,12 +15,14 @@ app.set('view engine', 'handlebars');
 app.use(express.static('web'));
 app.use(express.static('pics'));
 
+/*
 app.get('/', function (req, res) {
   //res.send('Hello World!');
   res.render('test', {name:'Linux!'});
 });
+*/
 
-app.get('/svg/:id', function (req, res) {
+app.get('/:id', function (req, res) {
   var id=req.params.id;
   svg=load_svg(id);
   res.render('svg', {id:id, svg:svg});
