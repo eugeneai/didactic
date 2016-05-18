@@ -27,14 +27,14 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.73807619"
      inkscape:cx="396.25628"
-     inkscape:cy="529.59107"
+     inkscape:cy="637.98096"
      inkscape:document-units="px"
      inkscape:current-layer="g4743"
      showgrid="false"
-     inkscape:window-width="1278"
-     inkscape:window-height="1002"
-     inkscape:window-x="0"
-     inkscape:window-y="20"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -113,7 +113,7 @@
              y="908.21143">Клён</tspan></text>
       </g>
       <g
-         transform="matrix(0.31711885,0,0,0.31711885,-102.7274,87.686021)"
+         transform="matrix(0.31711885,0,0,0.31711885,-97.307905,53.814179)"
          id="seed">
         <g
            transform="translate(176.58994,53.607659)"
