@@ -12,13 +12,7 @@ svg {
 </div>
 
 <script type="text/javascript">
-  $("#leave").append(`
-  <animateTransform
-    attributeType="XML"
-    attributeName="transform"
-    type="translate"
-    from="0,0" to="1000,1000"
-    begin="0s" dur="5"
-    repeatCount="indefinite"/>`
-  );
+  var s = Snap("svg");
+  var g = s.select("#leave");
+  g.animate({ transform: 's0.5r360,300,300' }, 1000, mina.bounce );
 </script>

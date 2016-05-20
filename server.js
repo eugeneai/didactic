@@ -40,7 +40,27 @@ function load_svg(name) {
   lines.shift();
   lines.shift();
   lines.shift();
+  lines.pop();
+  var last=lines.pop();
   var s=lines.join('\n');
+
+  /*
+  s+="\n"+`
+  <animateTransform
+      xlink:href="#leave"
+    attributeType="XML"
+    attributeName="transform"
+    type="translate"
+    from="0,0" to="443,701"
+    begin="0s" dur="1"
+
+   />
+
+  `+"\n";
+  */
+
+  s+="\n"+last+" <!-- comment --> \n";
+
   cache[name]=s;
   return s;
 };
