@@ -15,14 +15,14 @@ app.set('view engine', 'handlebars');
 app.use(express.static('web'));
 app.use(express.static('pics'));
 
-/*
+
 app.get('/', function (req, res) {
   //res.send('Hello World!');
   res.render('test', {name:'Linux!'});
 });
-*/
 
-app.get('/:id', function (req, res) {
+
+app.get('/svg/:id', function (req, res) {
   var id=req.params.id;
   svg=load_svg(id);
   res.render('svg', {id:id, svg:svg});

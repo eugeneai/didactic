@@ -6,7 +6,7 @@ svg {
 }
 </style>
 
-<h1> TEST {{id}}</h1>
+<h1> TEST 11 {{id}}</h1>
 <div id="emb_svg">
   {{{svg}}}
 </div>
@@ -14,5 +14,6 @@ svg {
 <script type="text/javascript">
   var s = Snap("svg");
   var g = s.select("#leave");
-  g.animate({ transform: 's0.5r360,300,300' }, 1000, mina.bounce );
+  // g.animate({ transform: 's0.5r360,300,300' }, 1000, mina.bounce );
+  g.animate({ transform: 's0.5t200,200r270' }, 1000, mina.bounce );
 </script>
