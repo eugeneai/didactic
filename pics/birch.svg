@@ -10,9 +10,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="163.77328mm"
-   height="196.94435mm"
-   viewBox="0 0 580.29904 697.83431"
+   width="170.67516mm"
+   height="196.40413mm"
+   viewBox="0 0 604.75449 695.92014"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -175,9 +175,9 @@
      borderopacity="0.01960784"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="252.28089"
-     inkscape:cy="242.62762"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="284.42901"
+     inkscape:cy="190.20633"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -186,10 +186,14 @@
      inkscape:window-x="0"
      inkscape:window-y="20"
      inkscape:window-maximized="1"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3414" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -198,7 +202,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -206,10 +210,9 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-14.311689,14.342688)">
+     transform="translate(-30.931323,10.341733)">
     <g
-       id="caption
-"
+       id="caption"
        transform="matrix(1,0,0,0.87292479,321.42856,5.785627)">
       <text
          xml:space="preserve"
@@ -238,7 +241,7 @@
     </g>
     <g
        id="seed"
-       transform="translate(18,13)">
+       transform="translate(-4,15)">
       <g
          style="fill:#9f9f9f;fill-opacity:1"
          id="g4206"
@@ -331,7 +334,8 @@
        id="g4544"
        transform="translate(191.42857,-8.1632606e-8)" />
     <g
-       id="leave">
+       id="leave"
+       transform="matrix(0.96774396,-0.25193576,0.25193576,0.96774396,-37.326938,137.07465)">
       <g
          transform="translate(3.7071068,3.2071068)"
          style="fill:#9f9f9f;fill-opacity:1"
