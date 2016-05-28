@@ -175,16 +175,16 @@
      borderopacity="0.01960784"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="284.42901"
-     inkscape:cy="190.20633"
+     inkscape:zoom="0.5"
+     inkscape:cx="179.8596"
+     inkscape:cy="172.9234"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1278"
-     inkscape:window-height="1002"
-     inkscape:window-x="0"
-     inkscape:window-y="20"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="10"
      fit-margin-left="10"
@@ -202,7 +202,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -213,7 +213,7 @@
      transform="translate(-30.931323,10.341733)">
     <g
        id="caption"
-       transform="matrix(1,0,0,0.87292479,321.42856,5.785627)">
+       transform="matrix(1,0,0,0.87292479,237.42856,-12.214373)">
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:104.44193268px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#9f9f9f;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -241,7 +241,7 @@
     </g>
     <g
        id="seed"
-       transform="translate(-4,15)">
+       transform="translate(-18,23)">
       <g
          style="fill:#9f9f9f;fill-opacity:1"
          id="g4206"
@@ -335,7 +335,7 @@
        transform="translate(191.42857,-8.1632606e-8)" />
     <g
        id="leave"
-       transform="matrix(0.96774396,-0.25193576,0.25193576,0.96774396,-37.326938,137.07465)">
+       transform="matrix(0.96774396,-0.25193576,0.25193576,0.96774396,-57.326938,137.07465)">
       <g
          transform="translate(3.7071068,3.2071068)"
          style="fill:#9f9f9f;fill-opacity:1"
@@ -407,7 +407,8 @@
        id="path4542"
        inkscape:connector-curvature="0" />
     <g
-       id="tree">
+       id="tree"
+       transform="matrix(1,0,-0.10531688,1,26.642542,0)">
       <g
          style="fill:#9f9f9f;fill-opacity:1"
          transform="matrix(1.3034793,0,0,1.4532036,-473.71326,-84.833573)"

@@ -223,9 +223,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2296825"
-     inkscape:cx="350.89751"
-     inkscape:cy="633.20725"
+     inkscape:zoom="0.61484125"
+     inkscape:cx="386.46444"
+     inkscape:cy="775.06932"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -251,8 +251,8 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g5210"
-       transform="translate(-39.750543,-168.49018)">
+       id="caption"
+       transform="translate(28.559773,-235.17406)">
       <text
          transform="scale(0.91298292,1.0953107)"
          sodipodi:linespacing="125%"
@@ -312,8 +312,8 @@
        id="path4559"
        inkscape:connector-curvature="0" />
     <g
-       id="g9642"
-       transform="translate(-189.41371,-3.2528722)">
+       id="tree"
+       transform="matrix(0.82564575,0,0,0.88376064,-138.14932,45.299411)">
       <g
          style="fill:#5f5f5f;fill-opacity:1;stroke:#242424;stroke-opacity:1"
          id="g9577">
@@ -492,8 +492,8 @@
       </g>
     </g>
     <g
-       id="g4300"
-       transform="translate(-33.351856,-46.002559)">
+       id="leave"
+       transform="matrix(0.88888448,0,0,0.88724684,76.733186,58.495726)">
       <g
          style="fill:#5f6d72;fill-opacity:0.92982459;stroke:#224c2d;stroke-opacity:1"
          transform="translate(-13.800768,5.75032)"
@@ -541,7 +541,8 @@
       </g>
     </g>
     <g
-       id="g4323">
+       id="seed"
+       transform="matrix(0.98881496,0.14914752,-0.14914752,0.98881496,51.132908,-134.80703)">
       <g
          style="fill:#424c50;fill-opacity:0.92982459"
          transform="translate(185.73533,-53.477976)"

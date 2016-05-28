@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.73807619"
-     inkscape:cx="396.25628"
-     inkscape:cy="637.98096"
+     inkscape:zoom="0.52189868"
+     inkscape:cx="310.65387"
+     inkscape:cy="704.13524"
      inkscape:document-units="px"
      inkscape:current-layer="g4743"
      showgrid="false"
@@ -55,7 +55,7 @@
     <g
        id="g4743">
       <g
-         transform="matrix(0.47380067,0,0,0.47384242,443.63322,701.91237)"
+         transform="matrix(0.4194622,0,0,0.43286934,393.85966,378.89036)"
          id="leave">
         <g
            transform="translate(94,-175)"
@@ -88,7 +88,7 @@
       </g>
       <g
          id="caption"
-         transform="translate(-28.452347,31.162094)">
+         transform="translate(-64.857881,-231.34097)">
         <text
            sodipodi:linespacing="1000%"
            id="text4733"
@@ -113,7 +113,7 @@
              y="908.21143">Клён</tspan></text>
       </g>
       <g
-         transform="matrix(0.31711885,0,0,0.31711885,-97.307905,53.814179)"
+         transform="matrix(0.27082819,0,0,0.26150934,-90.554786,-62.461579)"
          id="seed">
         <g
            transform="translate(176.58994,53.607659)"
@@ -176,7 +176,7 @@
         </g>
       </g>
       <g
-         transform="translate(28.580505,-11.871842)"
+         transform="matrix(0.66789549,0,0,0.6935229,27.296647,1.1651713)"
          id="tree">
         <g
            id="g4697">
