@@ -1,58 +1,59 @@
-  <style>
-  /*
-svg {
-  border: 3px solid #eee;
-  display: block;
-  margin: 1em auto;
-}
-*/
+<style>
+ /*
+    svg {
+    border: 3px solid #eee;
+    display: block;
+    margin: 1em auto;
+    }
+  */
 </style>
 
 <!-- <h1> TEST 11 {{id}}</h1> -->
 <div id="emb_svg">
-  {{{svg}}}
+    {{{svg}}}
 </div>
 
 <script type="text/javascript">
  var s = Snap("svg");
 
  function show_g(gr, time, callback) {
-   var g = gr.g
-   g.animate({ transform: gr.t }, time, gr.e, function () {
-     g.v=true;
-     callback();
-   });
+     var g = gr.g
+     g.animate({ transform: gr.t }, time, gr.e, function () {
+         g.v=true;
+         callback();
+     });
  }
 
  function show_l(objs, scale, i) {
-   if (i==undefined) {i=0;};
-   if (i>=objs.length) {
-     return;
-   };
-   var o = objs[i];
+     if (i==undefined) {i=0;};
+     if (i>=objs.length) {
+         return;
+     };
+     var o = objs[i];
 
-   if (true) {
-     show_g(o,scale*o.time, function(){
-       show_l(objs, scale, i+1);
-     });
-   } else {
-     show_l(objs, scale, i+1);
-   }
+     if (true) {
+         show_g(o,scale*o.time, function(){
+             show_l(objs, scale, i+1);
+         });
+     } else {
+         show_l(objs, scale, i+1);
+     }
  }
 
  function hide_g(id, time) {
-   var g = s.select(id); /// START FROM HERE
-   if (g==null) {
-     alert("Not found:"+id);
-   };
-   var old=g.attr("transform");
-   var al=time==undefined;
-   if (al) {
-     g.attr({transform:"s0"});
-   } else {
-     g.animate({transform:"s0"}, time, mina.easein);
-   }
-   return {g:g, t:old, v:false, id:id};
+     var g = s.select(id); /// START FROM HERE
+     /// http://127.0.0.1:3000/after/100-101-102-99-34
+     if (g==null) {
+         alert("Not found:"+id);
+     };
+     var old=g.attr("transform");
+     var al=time==undefined;
+     if (al) {
+         g.attr({transform:"s0"});
+     } else {
+         g.animate({transform:"s0"}, time, mina.easein);
+     }
+     return {g:g, t:old, v:false, id:id};
  };
 
  var tree=hide_g("#tree");
@@ -72,13 +73,13 @@ svg {
  var only=[tree, cap];
  var parts=[leave,seed,cap];
  tree.g.mouseup(function(){
-   show_l(parts, 1);
+     show_l(parts, 1);
  })
 
  parts.forEach(function (part) {
-   part.g.mouseup(function () {
-     hide_g(part.id, 1000);
-   });
+     part.g.mouseup(function () {
+         hide_g(part.id, 1000);
+     });
  });
 
  // show_l(objs, 1);
