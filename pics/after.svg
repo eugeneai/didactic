@@ -141,5 +141,20 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.73852539px;font-family:'PT Serif Caption';-inkscape-font-specification:'PT Serif Caption, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:url(#linearGradient4555);fill-opacity:1;stroke:url(#linearGradient4547);stroke-width:1.46500003;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.7372549"
          x="107.34949"
          y="98.699379">10</tspan></text>
+    <ellipse
+       style="opacity:0;fill:#2172b8;fill-opacity:1;stroke:#00ba00;stroke-width:1.46499991;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.81028939"
+       id="good"
+       cx="74.144371"
+       cy="125.34953"
+       rx="19.84375"
+       ry="15.969494" />
+    <rect
+       style="opacity:0;fill:#2172b8;fill-opacity:1;stroke:#00ba00;stroke-width:1.46499991;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.81028939"
+       id="bad"
+       width="47.625"
+       height="32.694939"
+       x="131.21878"
+       y="109.38004"
+       ry="10.386377" />
   </g>
 </svg>

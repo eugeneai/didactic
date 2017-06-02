@@ -35,12 +35,35 @@ app.get("/after/:task", function (req, res) {
   var q = parts[0];
   var a = parts[1];
   var svg=load_svg('after');
-  res.render('card', {queez:q, answer:a, svg:svg});
+  var answers = parts.slice(1,parts.length);
+  answers = shuffle(answers);
+  res.render('card', {queeze:q, answer:a, svg:svg, answers:answers});
 });
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
+
+
+function shuffle(array) { // Knut's algorithm
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 
 function load_svg(name) {
   if (name in cache) {
