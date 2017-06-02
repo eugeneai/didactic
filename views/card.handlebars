@@ -1,0 +1,26 @@
+  <style>
+  /*
+svg {
+  border: 3px solid #eee;
+  display: block;
+  margin: 1em auto;
+}
+*/
+</style>
+
+<!-- <h1> TEST 11 {{id}}</h1> -->
+<div id="emb_svg">
+  {{{svg}}}
+</div>
+
+<h1> The question is {{queez}}</h1>
+<h1> The answer is {{answer}}</h1>
+
+<script type="text/javascript">
+ $(function() {
+     var s = Snap("svg");
+     var queez = {{queez}};
+     var answer = {{answer}};
+
+ });
+</script>

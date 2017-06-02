@@ -24,8 +24,18 @@ app.get('/', function (req, res) {
 
 app.get('/svg/:id', function (req, res) {
   var id=req.params.id;
-  svg=load_svg(id);
+  var svg=load_svg(id);
   res.render('svg', {id:id, svg:svg});
+});
+
+app.get("/after/:task", function (req, res) {
+  // task is of form q-a
+  var task = req.params.task.trim();
+  var parts = task.split("-");
+  var q = parts[0];
+  var a = parts[1];
+  console.log(q,a);
+  res.render('card', {queez:q, answer:a});
 });
 
 app.listen(3000, function () {
