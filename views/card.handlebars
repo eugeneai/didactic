@@ -49,6 +49,11 @@
      var s = Snap("svg");
      var queez = {{queez}};
      var answer = {{answer}};
-     $("#queeze").text("{{queez}}")
- });
+     var q = $("#queeze");
+     q.text("{{queez}}");
+     var s = q.attr("style");
+     s = s.replace("text-align:end;", "");
+     s = s.replace("text-anchor:end;", "text-anchor:middle;");
+     q.attr("style", s);
+  });
 </script>
