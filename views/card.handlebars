@@ -1,20 +1,48 @@
-  <style>
-  /*
-svg {
-  border: 3px solid #eee;
-  display: block;
-  margin: 1em auto;
-}
-*/
+<style>
+ svg {
+     /* border: 3px solid #eee; */
+     display: block;
+     margin: 1em auto;
+ }
+
+ .answer-zone {
+     display: block;
+     width: 100%;
+     padding: 2em;
+     background-color: green;
+ }
+
+ .centered {
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     background-color: yellow;
+ }
+
+ html, body { margin: 0; padding: 0; }
+
 </style>
+
+<div style="margin:0 auto; background-color:red;">
+    centered content
+</div>
 
 <!-- <h1> TEST 11 {{id}}</h1> -->
 <div id="emb_svg">
-  {{{svg}}}
+    {{{svg}}}
 </div>
 
-<h1> The question is {{queez}}</h1>
-<h1> The answer is {{answer}}</h1>
+<div class="answer-zone">
+    <div class="centered">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">{{answer}}</button>
+        <button type="button" class="btn btn-default">Right</button>
+    </div>
+</div>
 
 <script type="text/javascript">
  $(function() {

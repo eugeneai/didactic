@@ -34,8 +34,8 @@ app.get("/after/:task", function (req, res) {
   var parts = task.split("-");
   var q = parts[0];
   var a = parts[1];
-  console.log(q,a);
-  res.render('card', {queez:q, answer:a});
+  var svg=load_svg('after');
+  res.render('card', {queez:q, answer:a, svg:svg});
 });
 
 app.listen(3000, function () {
