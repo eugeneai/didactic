@@ -1,0 +1,325 @@
+<div style="font-family: 'Times New Roman', Times, serif;">
+<svg id="one_button" width="400" height="400" >
+</svg>
+<svg id="one_dashed" width="400" height="400">
+</svg>
+<br>
+<svg id="one_text" width="400" height="400">
+</svg>
+<svg id="one_numbers" width="600" height="400">
+</svg>
+</div>
+
+<script>
+var offset = 20;
+
+function bind_numbers(){
+	var s = Snap("#one_numbers");
+	var nLength = s.node.clientWidth-offset-offset*1.5-10;
+	
+	var step = nLength/10;
+	for(var i=0;i<=10;i++){
+		var l = s.line(offset-5+step*i,10,offset-5+step*i,80);
+		l.attr({
+			stroke: "#000",
+			strokeWidth: 2
+		});
+		
+		
+	}
+	
+	for(var i=0;i<10;i++){
+		var txt = i+1
+		if(txt == 10){
+			txt = "0";
+		}
+		var n = s.text(offset-10+step*i+step/2,50,txt);
+		n.attr({transform:"s4", cursor:"pointer"});
+		if(txt == 1){
+			n.attr({fill: "rgba(100,50,50,1)"});
+			
+		}
+	}
+	
+	var topLine = s.line(offset-5,10,s.node.clientWidth-offset*1.5-15,10);
+	topLine.attr({
+		stroke: "#000",
+		strokeWidth: 2
+	});
+	
+	var bottomLine = s.line(offset-5,80,s.node.clientWidth-offset*1.5-15,80);
+	bottomLine.attr({
+		stroke: "#000",
+		strokeWidth: 2
+	});
+}
+
+function bind_text(){
+	var s = Snap("#one_text");
+	var paused = true;
+	var play, pause;
+	var audio = new Audio('/sound/song.mp3');
+	var text = [
+	"Хобот у слона 1 он им чистит апельсин,",
+	"2 крыла у самолета Есть работа у пилота,",
+	"Цвета 3 у светофора Красный желтый и зеленый,",
+	"Лап 4 у кота Вот какая красота,",
+	"На перчатке пальцев 5 Будем дальше их считать,",
+	"Нашу песню продолжаем 6 гитарных струн считаем,",
+	"Ноток есть всего  7  штук Издают красивый звук,",
+	"Восемь ног у паука Он свисает с потолка,",
+	"9 в доме этажей Там квартиры для людей,",
+	"10 цифр есть на свете Сосчитаем ка их вместе."
+	]
+	
+	var t1 = s.text(50, 50, text);
+	t1.selectAll("tspan").forEach(function(tspan, i){
+      tspan.attr({x:0, y:25*(i+1)});
+	});
+	
+	Snap.load("/svg/play.svg", onPlayLoaded );
+	Snap.load("/svg/pause.svg", onPauseLoaded );
+	
+	function onPlayLoaded(f){
+		play = f.select("#play");
+		var t = new Snap.Matrix();
+		t.scale(2.5);
+		t.translate(120, 0);
+		play.transform(t);
+		s.append(play);
+		
+		play.mouseover(function(){
+			play.attr({fill : "rgba(100,0,0,1)"});
+		});
+		
+		play.mouseout(function(){
+			play.attr({fill : "rgba(0,0,0,1)"});
+		});
+		
+		play.click(function(){
+			if(paused){
+				Snap.animate(1,0, function( value ) {
+					play.attr({ opacity: value});
+				}, 200,mina.easin,playCallback);
+				Snap.animate(0,1, function( value ) {
+					pause.attr({ opacity: value});
+				}, 200,mina.easin);
+			}
+		});
+	}
+	
+	function playCallback(){
+		paused = false;
+		audio.play();
+	}
+	
+	function onPauseLoaded(f){
+		pause = f.select("#pause");
+		var t = new Snap.Matrix()
+		t.scale(2.5);
+		t.translate(120, 0);
+		pause.transform(t);
+		pause.attr({opacity:0});
+		s.append(pause);
+		
+		pause.mouseover(function(){
+			pause.attr({fill : "rgba(100,0,0,1)"});
+		});
+		
+		pause.mouseout(function(){
+			pause.attr({fill : "rgba(0,0,0,1)"});
+		});
+		
+		pause.click(function(){
+			if(!paused){
+				Snap.animate(0,1, function( value ) {
+					play.attr({ opacity: value});
+				}, 200,mina.easin);
+				Snap.animate(1,0, function( value ) {
+					pause.attr({ opacity: value});
+				}, 200,mina.easin,pauseCallback);
+			}
+			
+		});
+	}
+	
+	function pauseCallback(){
+		paused = true;
+		audio.pause();
+	}
+}
+
+function bind_button(){
+	var s = Snap("#one_button");
+	var arrow;
+	var isAudioPlayed = false;
+	var audio = new Audio('/sound/1.mp3');
+	
+	var t = s.text(s.node.clientWidth/2,s.node.clientHeight/2,"1");
+	t.attr({transform:"s30",cursor:"pointer",fill: "rgba(100,100,100,1)"});
+	
+	t.mouseover(function(){
+		t.attr({
+			fill: "rgba(100,50,50,1)"
+		});
+	});
+	
+	t.mouseout(function(){
+		t.attr({
+			fill: "rgba(100,100,100,1)"
+		});
+	});
+	
+	t.mousedown(function(){
+		t.attr({
+			fill: "rgba(100,50,100,1)"
+		});
+		if(!isAudioPlayed){
+			isAudioPlayed = true;
+			audio.play();
+			audio.onended = function() {
+				isAudioPlayed = false;
+			};
+		}
+		
+	});
+	
+	t.mouseup(function(){
+		t.attr({
+			fill: "rgba(100,50,50,1)"
+		});
+	});
+		
+	Snap.load("/svg/arrow.svg", onArrowLoaded );
+	
+	function onArrowLoaded(f){
+		arrow = f.select("#arrow");
+		s.append(arrow);
+		var t = new Snap.Matrix()
+		t.translate(s.node.clientWidth/2+20, 50);
+		t.scale(0.07);
+		t.rotate(-40);
+		arrow.transform(t);
+	}
+}
+	
+function bind_dashed(){
+	var cornerSubdivisions = 10;
+	var lineSubdivisions = 40;
+	var dashAnimationDuration = 200;
+
+	var startColor = "rgba(0,0,0,0.3)";
+	var endColor = "rgba(0,0,0,1)";
+	var transparentColor = "rgba(0,0,0,0)";
+	
+	var audio = new Audio('/sound/1.mp3');
+	
+
+	var smileOriginalTransform;
+
+	var numberShowed = false;
+
+	var s = Snap("#one_dashed");
+	var smile;
+	Snap.load("/svg/simple-smile.svg", onSmileLoaded );
+
+	function onSmileLoaded(f){
+		smile = f.select("#smile");
+		s.append(smile);
+		var t = new Snap.Matrix()
+		t.translate(400, s.node.clientHeight);
+		t.scale(-3);
+		smile.transform(t);
+		smileOriginalTransform = smile.attr("transform");
+		smile.attr({transform: "S0"});
+	}
+
+
+	var bottomMiddle = {x :s.node.clientWidth/2, y: s.node.clientHeight-offset};
+	var topMiddle = {x: s.node.clientWidth/2, y:offset};
+	var angleCoeff = s.node.clientWidth/5;
+	var corner = {x: topMiddle.x-angleCoeff, y: angleCoeff};
+
+	var oneCoords = subdivideCoords(corner,topMiddle,bottomMiddle);
+
+	var oneLines = [];
+	var oneCircles = [];
+
+	for(var i=0; i<oneCoords.length-1; i++){
+		var currentCoords = oneCoords[i];
+		var nextCoords = oneCoords[i+1];
+
+		var smallCircle = s.circle(currentCoords.x, currentCoords.y, 2);
+		smallCircle.attr({fill:startColor});
+		var line = s.line(currentCoords.x,currentCoords.y,nextCoords.x,nextCoords.y);
+		line.attr({id:"line_"+i});
+		line.attr({stroke:startColor,strokeWidth:25,strokeOpacity:0, strokeLinecap:"round"});
+		line.showed = false;
+		oneLines.push(line);
+	}
+
+	oneLines.forEach(function(line){
+		line.mouseover(function(){
+			if(!line.showed){
+				showLine(line.attr("id"),function(){
+					line.showed = true;
+					line.attr({stroke:endColor});
+					var figShowed = checkLines();
+					if(figShowed){
+						numberShowedCallback();
+					}
+				});
+			}
+			
+		});
+	});
+
+	function numberShowedCallback(){
+		if(numberShowed){
+			return;
+		}
+		numberShowed = true;
+		
+		smile.animate({transform:smileOriginalTransform}, 1000, mina.bounce,function(){
+				audio.play();
+		});
+	}
+
+	function checkLines(){
+		var ret = true;
+		oneLines.forEach(function(line){
+			if(!line.showed)
+				ret = false;
+		});
+		return ret;
+	}
+
+	function subdivideCoords(corner,topMiddle,bottomMiddle){
+		var ret = [];
+		
+		var cornerToTopVec = {x:topMiddle.x-corner.x, y:topMiddle.y-corner.y};
+		for(var i=0;i<=cornerSubdivisions;i++){
+			ret.push({x:corner.x+cornerToTopVec.x*i/cornerSubdivisions,y:corner.y+cornerToTopVec.y*i/cornerSubdivisions});
+		};
+
+		var topToBottomVec = {x:bottomMiddle.x-topMiddle.x, y:bottomMiddle.y-topMiddle.y};
+		for(var i=0;i<=lineSubdivisions;i++){
+			ret.push({x:topMiddle.x+topToBottomVec.x*i/lineSubdivisions,y:topMiddle.y+topToBottomVec.y*i/lineSubdivisions});
+		};
+
+		return ret;
+		
+	}
+
+	function showLine(lineId,showLineCallback){
+		var line = s.select("#"+lineId);
+		Snap.animate(0,1, function( value ) {
+			line.attr({ strokeOpacity: value, strokeWidth: 5});
+		}, dashAnimationDuration,mina.easin,showLineCallback);
+	}
+}
+bind_button();
+bind_dashed();
+bind_text();
+bind_numbers();
+</script>
