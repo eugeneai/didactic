@@ -1,0 +1,17 @@
+<h1>См. также {{name}}</h1>
+var audio = $("#mySoundClip")[0];
+2
+$("letterA").mouseenter(function() {
+3
+  audio.play();
+4
+});
+
+<audio src="audio" autoplay="autoplay"></audio>
+<p onclick="soundClick()">Кликни по этому тексту</p>
+function soundClick() {
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = 'click.mp3'; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+}
+<a href="#" onclick="new Audio('http://goo.gl/UWLwi1').play(); return false;">Play</a>

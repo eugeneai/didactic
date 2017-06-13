@@ -21,30 +21,15 @@ app.get('/', function (req, res) {
   res.render('test', {name:'Linux!'});
 });
 
+app.get('/numbers', function (req, res) {
+  res.render('numbers');
+});
 
 app.get('/svg/:id', function (req, res) {
   var id=req.params.id;
-  var svg=load_svg(id);
+  svg=load_svg(id);
   res.render('svg', {id:id, svg:svg});
 });
-
-app.get("/after/:task", function (req, res) {
-  // task is of form q-a
-  var task = req.params.task.trim();
-  var parts = task.split("-");
-  var q = parts[0];
-  var a = parts[1];
-  var svg=load_svg('after');
-  var answers = parts.slice(1,parts.length);
-  answers = shuffle(answers);
-  res.render('card', {queeze:q, answer:a, svg:svg, answers:answers});
-});
-
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
-
-
 function shuffle(array) { // Knut's algorithm
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -64,6 +49,28 @@ function shuffle(array) { // Knut's algorithm
   return array;
 }
 
+function randomInteger(min, max) {
+    var rand = min + Math.random() * (max + 1 - min);
+    rand = Math.floor(rand);
+    return rand;
+}
+
+app.get("/test", function (req, res) {
+  var q = randomInteger(1,50);
+  var a = q+1;
+  var svg=load_svg('after');
+  var answers = [];
+  for(var i=0;i<3;i++){
+	  answers.push(randomInteger(1,50));
+  }
+  answers.push(a);
+  answers = shuffle(answers);
+  res.render('card', {queeze:q, answer:a, svg:svg, answers:answers});
+});
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});
 
 function load_svg(name) {
   if (name in cache) {
